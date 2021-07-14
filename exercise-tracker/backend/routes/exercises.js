@@ -1,4 +1,5 @@
- const router = require('express').Router()
+ const Router = require('express')
+ const router = Router()
  const Exercise = require('../models/user.model')
 
  router.route('/').get((req, res) => {

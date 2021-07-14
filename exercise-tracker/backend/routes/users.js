@@ -1,4 +1,5 @@
-const router = require("express").Router(); 
+const Router = require('express')
+const router = Router(); 
 const User = require("../models/user.model")
 
 router.route('/').get((req, res) => {
@@ -7,7 +8,7 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json(`Error:` + err))
 })
 
-router.route("./add").post((req, res) => {
+router.route("/add").post((req, res) => {
     const username = req.body.username; 
     const newUser = new User({username})
     newUser.save()
